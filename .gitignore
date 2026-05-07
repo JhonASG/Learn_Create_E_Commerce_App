@@ -1,0 +1,29 @@
+# Dependencias
+node_modules/
+dist/
+build/
+.next/
+
+# Variables de Entorno (CRÍTICO: Nunca subir estas al repo)
+.env
+.env.local
+.env.production
+.env.staging
+
+# Logs y Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.log
+
+# IDEs y Editores
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Artefactos y Cobertura de Tests
+coverage/
+*.zip
+*.tar.gz
+docker-compose.override.yml
