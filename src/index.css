@@ -1,0 +1,28 @@
+:root {
+  /* Paleta de colores premium (Tonos oscuros y acentos vibrantes) */
+  --bg-color: #0f0f11;
+  --text-main: #f3f3f3;
+  --text-muted: #a0a0a0;
+  --primary: #d4af37;
+  /* Dorado sútil para cerámicas */
+  --primary-hover: #b5952f;
+  --header-bg: rgba(15, 15, 17, 0.8);
+  /* Transparencia para efecto cristal */
+
+  font-family: 'Inter', system-ui, -apple-system, Roboto, Oxygen, Ubuntu, sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+}
