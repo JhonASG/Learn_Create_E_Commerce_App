@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import Layout from './components/Layout'
+import Hero from './components/Hero';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <h1>Bienvenido al E-Commerce</h1>
-      </div>
-    </>
-  )
+	return (
+		<Layout >
+			<Hero />
+			{/* El catálogo irá aquí debajo más adelante */}
+		</Layout >
+	)
 }
 
-export default App
+export default App;
