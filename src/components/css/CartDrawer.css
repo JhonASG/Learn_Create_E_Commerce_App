@@ -1,0 +1,113 @@
+/* Fondo oscuro que cubre todo (Overlay) */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+    /* Para pegar el panel a la derecha */
+}
+
+/* Panel */
+.cart-drawer {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background-color: var(--bg-color);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cart-items {
+    flex: 1;
+    /* Ocupa todo el espacio disponible */
+    overflow-y: auto;
+    /* Scroll si hay muchos productos */
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.empty-cart {
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-details h4 {
+    margin-bottom: 0.2rem;
+}
+
+.cart-footer {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkout-btn {
+    background-color: var(--primary);
+    color: #000;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: var(--primary-hover);
+}

@@ -1,6 +1,6 @@
 import './css/Header.css';
 
-function Header({ cart }) {
+function Header({ cart, toggleCart }) {
     return (
         <header className="header">
             <div className="logo">Ceramica<span>Pro</span></div>
@@ -9,7 +9,7 @@ function Header({ cart }) {
                 <a href="#catalogo">Catalogo</a>
                 <a href="#nosotros">Nosotros</a>
             </nav>
-            <div className="cart-icon">
+            <div className="cart-icon" onClick={toggleCart}>
                 🛒
                 {/* Si hay items en el carrito mostramos el número */}
                 {cart && cart.length > 0 && (
