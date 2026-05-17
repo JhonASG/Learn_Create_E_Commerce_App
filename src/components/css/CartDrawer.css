@@ -111,3 +111,18 @@
 .checkout-btn:hover {
     background-color: var(--primary-hover);
 }
+
+.remove-item-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: auto;
+    /* Esto empujará la papelera a la derecha */
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.remove-item-btn:hover {
+    opacity: 1;
+}

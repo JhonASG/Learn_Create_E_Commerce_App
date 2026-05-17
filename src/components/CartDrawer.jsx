@@ -1,6 +1,6 @@
 import './css/CartDrawer.css';
 
-function CartDrawer({ cart, closeCart }) {
+function CartDrawer({ cart, closeCart, removeFromCart }) {
     // Calcular el total de la compra sumando el precio de cada item.
     const total = cart.reduce((suma, item) => suma + item.price, 0);
 
@@ -24,6 +24,13 @@ function CartDrawer({ cart, closeCart }) {
                                     <h4>{item.name}</h4>
                                     <p>${item.price.toFixed(2)}</p>
                                 </div>
+                                <button
+                                    className="remove-item-btn"
+                                    onClick={() => removeFromCart(index)}
+                                    title='Eliminar producto'
+                                >
+                                    🗑️
+                                </button>
                             </div>
                         ))
                     )}
