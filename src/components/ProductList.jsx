@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 import { products } from "../data/products";
 import "./css/ProductList.css";
 
-function ProductList() {
+function ProductList({ addToCart }) {
     return (
         <section id="catalogo" className="catalog-section">
             <h2 className="section-title">Nuestra colección</h2>
@@ -10,7 +10,11 @@ function ProductList() {
                 {
                     products.map(product => (
                         // En React cuando se usa map() cada elemento debe tener una 'key'
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard
+                            key={product.id}
+                            product={product}
+                            addToCart={addToCart}
+                        />
                     ))
                 }
             </div>

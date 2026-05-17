@@ -1,10 +1,10 @@
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
-function Layout({ children }) {
+function Layout({ children, cart }) {
     return (
         <>
-            <Header />
+            <Header cart={cart} /> {/* Pasamos el carrito al Header */}
             <main className='main-content'>
                 {children}
             </main>

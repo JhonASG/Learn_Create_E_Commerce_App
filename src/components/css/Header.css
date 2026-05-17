@@ -41,6 +41,19 @@
 }
 
 .cart-icon {
-    font-size: 1.2rem;
+    position: relative;
+    font-size: 1.5rem;
     cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--primary);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
 }
