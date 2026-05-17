@@ -39,3 +39,9 @@
     border-color: var(--primary);
     color: var(--primary);
 }
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: #000;
+    border-color: var(--primary);
+}
